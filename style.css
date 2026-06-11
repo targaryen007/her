@@ -1,1 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:wght@400;600&display=swap');
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#F5E8D8;
+min-height:100vh;
+font-family:'Cormorant Garamond',serif;
+overflow-x:hidden;
+position:relative;
+}
+
+/* Floating hearts */
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:0;
+}
+
+.heart{
+position:absolute;
+color:#D72638;
+font-size:20px;
+animation:float 8s linear infinite;
+opacity:.4;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+}
+
+/* Notebook */
+
+.notebook{
+position:relative;
+z-index:2;
+max-width:800px;
+margin:60px auto;
+background:#FFF8F0;
+padding:50px;
+border-radius:20px;
+box-shadow:
+0 20px 60px rgba(0,0,0,.15);
+background-image:
+repeating-linear-gradient(
+transparent,
+transparent 34px,
+rgba(0,0,0,.08) 35px
+);
+}
+
+.title{
+font-size:48px;
+color:#D72638;
+font-family:'Caveat',cursive;
+margin-bottom:30px;
+text-align:center;
+}
+
+.content{
+font-size:26px;
+line-height:1.8;
+text-align:center;
+color:#444;
+}
+
+.photo{
+display:block;
+margin:30px auto;
+max-width:350px;
+width:100%;
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.next-btn{
+position:fixed;
+right:30px;
+bottom:30px;
+background:#D72638;
+color:white;
+padding:15px 30px;
+border-radius:40px;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 8px 25px rgba(215,38,56,.4);
+transition:.3s;
+z-index:5;
+}
+
+.next-btn:hover{
+transform:translateY(-4px) scale(1.05);
+}
+
+.fade{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.polaroid{
+background:white;
+padding:10px;
+width:250px;
+margin:30px auto;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transform:rotate(-2deg);
+}
+
+.caption{
+font-family:'Caveat',cursive;
+font-size:24px;
+padding-top:10px;
+text-align:center;
+}
