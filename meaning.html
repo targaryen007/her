@@ -1,34 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>What You Mean To Me ❤️</title>
 
 <style>
-body{
+
+*{
 margin:0;
-height:100vh;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#fff0f5,#ffe4ec);
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:#fff5f7;
-font-family:Arial;
+padding:30px;
 }
 
 .card{
 background:white;
-padding:40px;
-border-radius:20px;
 max-width:700px;
+padding:35px;
+border-radius:25px;
 text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+animation:fadeIn 1.2s ease;
+}
+
+.story-image{
+width:100%;
+max-width:380px;
+border-radius:20px;
+margin-bottom:25px;
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+h1{
+color:#ff4d6d;
+margin-bottom:25px;
+font-size:36px;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+color:#444;
+margin-bottom:18px;
+}
+
+.highlight{
+color:#ff4d6d;
+font-weight:bold;
+font-size:22px;
 }
 
 button{
+margin-top:20px;
 background:#ff4d6d;
 color:white;
 border:none;
-padding:15px 30px;
-border-radius:25px;
+padding:15px 35px;
+border-radius:30px;
+font-size:18px;
 cursor:pointer;
+transition:0.3s;
 }
+
+button:hover{
+transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 </style>
 
 </head>
@@ -36,6 +99,8 @@ cursor:pointer;
 <body>
 
 <div class="card">
+
+<img src="picts.jpeg" class="story-image">
 
 <h1>✨ What You Mean To Me</h1>
 
@@ -46,7 +111,7 @@ but you've become someone very important to me.
 
 <p>
 Some people enter your life quietly
-and somehow become part of your favourite thoughts.
+and somehow become part of your favorite thoughts.
 </p>
 
 <p>
@@ -54,9 +119,18 @@ That's what happened with you.
 </p>
 
 <p>
-Your smile, your conversations,
-and even the smallest moments
-have meant more than you know.
+Every conversation,
+every laugh,
+every random moment
+somehow became a memory worth keeping.
+</p>
+
+<p>
+Looking at this picture reminds me of one simple thing...
+</p>
+
+<p class="highlight">
+❤️ You brought more happiness into my life than you probably realize. ❤️
 </p>
 
 <button onclick="window.location.href='letter.html'">
